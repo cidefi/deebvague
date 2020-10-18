@@ -12,11 +12,11 @@ inputFile = AudioSegment.from_mp3("demo.mp3")
 audioChunks = split_on_silence (
     inputFile, 
     min_silence_len = 500,  # measured in ms
-    silence_thresh = -32    # measured in dBFS
+    silence_thresh = -40    # measured in dBFS
 )
 
 for i, chunk in enumerate(audioChunks):
-    padding = AudioSegment.silent(duration=1000)
+    padding = AudioSegment.silent(duration=500)
     rawSegment = padding + chunk + padding
     normalizedSegment = match_target_amplitude(rawSegment, -20.0)
 
