@@ -8,11 +8,11 @@ def match_target_amplitude(aChunk, target_dBFS):
     change_in_dBFS = target_dBFS - aChunk.dBFS
     return aChunk.apply_gain(change_in_dBFS)
 
-inputFile = AudioSegment.from_mp3("demo.mp3")
+inputFile = AudioSegment.from_mp3("ivan01.mp3")
 audioChunks = split_on_silence (
     inputFile, 
-    min_silence_len = 500,  # measured in ms
-    silence_thresh = -40    # measured in dBFS
+    min_silence_len = 250,  # measured in ms
+    silence_thresh = -32    # measured in dBFS
 )
 
 for i, chunk in enumerate(audioChunks):
