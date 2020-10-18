@@ -4,6 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const fs = require('fs');
+const path = require('path');
+
+class AudioSegment {
+  constructor(filename) {
+    this.filename = filename;
+    this.transcription = '';
+  }
+
+  playAudio() {
+    // play the dang audio file
+  }
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
