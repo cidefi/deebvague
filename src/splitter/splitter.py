@@ -8,7 +8,7 @@ def match_target_amplitude(aChunk, target_dBFS):
     change_in_dBFS = target_dBFS - aChunk.dBFS
     return aChunk.apply_gain(change_in_dBFS)
 
-inputFile = AudioSegment.from_mp3("NSC_.mp3")
+inputFile = AudioSegment.from_mp3("demo.mp3")
 audioChunks = split_on_silence (
     inputFile, 
     min_silence_len = 500,  # measured in ms
@@ -16,7 +16,7 @@ audioChunks = split_on_silence (
 )
 
 for i, chunk in enumerate(audioChunks):
-    padding = AudioSegment.silent(duration=500)
+    padding = AudioSegment.silent(duration=1000)
     rawSegment = padding + chunk + padding
     normalizedSegment = match_target_amplitude(rawSegment, -20.0)
 
