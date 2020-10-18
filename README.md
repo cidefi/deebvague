@@ -5,9 +5,9 @@ the `deebvague` toolkit is a set of tools to aid a user in creating deebies.
 so what if i want gilbert gottfried to read my children bedtime stories? it's not child abuse if they find his voice soothing. it's not like i won't have my cellphone on me when i'm out cheatin'. don't tell my wife about this repo.
 
 ## proposed workflow
-1. run `getter` (to-be-developed) to extract audio from a youtube video
+1. run `getter` (completed) to extract audio from a youtube video
 2. run `splitter` (completed) to split into nice segments
-3. start transcription framework (to-be-developed) and get to work
+3. start transcription framework (in development) and get to work
 4. model gilby's sweet soothing voice to feed into wavernn
 5. traumati--soothe my stepkids.
 
